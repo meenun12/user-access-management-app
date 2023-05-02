@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "useraccessapp"
+version = "0.1.0"
+description = "In People Analytics we have different dashboards with users who are allowed to see only their cut of data. We would like to build an interface which helps our PO to assign (for any dashboard) any user’s company email address to one or more ING organization team(s) that the user has the right to access data for. In this interface, the PO can look up a dashboard, a user, assign/remove/update groups to users, and submit the user-group."
+authors = ["meenun12 <meenun12@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Flask = "^2.2.3"
+flask-sqlalchemy = "^3.0.1"
+flask-wtf = "^1.1.1"
+wtforms = "^3.0.1"
+email-validator = "^2.0.0.post2"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,19 @@
+{% from "_renderfield.html" import renderfield %} {% from "_flashmessages.html"
+import flash_messages %} {% extends "base.html" %} {% block body %}
+<div class="container theme-showcase col-sm-6 col-sm-offset-3" role="main">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Add Team</h3>
+    </div>
+
+    <div class="panel-body">
+      {{ flash_messages() }}
+      <form id="department-form" method="POST" action="">
+        {{ form.csrf_token }}
+        <div class="form-group">{{ renderfield(form.name) }}</div>
+        <button class="btn btn-primary">Add</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
